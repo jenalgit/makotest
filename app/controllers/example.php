@@ -38,11 +38,11 @@ namespace app\controllers;
 				$nama=$_POST['nama'];
 				$nim=$_POST['nim'];
 				//$oldnim=$_POST['oldnim'];
-				echo $nama.":".$nim;
+				//echo $nama.":".$nim;
 				if($db->update($oldnim, $nama, $nim))$this->response->redirect('example/index');
 				else {echo "error";}
 			}
-			else echo "";
+			//else echo "";
 		}
 		
 			$view=new View('mhs/update',array('data'=>$db->getByNim($oldnim)));
